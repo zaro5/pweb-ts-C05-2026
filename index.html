@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Admin - Sistem Antrian</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="guarding">
+  <header class="topbar">
+    <div>
+      <h1>Dashboard Admin</h1>
+      <p class="muted small">Reset setiap hari agar penomoran antrian mulai dari awal.</p>
+    </div>
+    <nav class="topbar-actions">
+      <span id="user-info" class="user-chip"></span>
+      <button id="btn-reset" class="btn btn-danger-outline btn-sm" type="button">Reset Antrian</button>
+      <button id="btn-logout" class="btn btn-outline btn-sm" type="button">Keluar</button>
+    </nav>
+  </header>
+
+  <main class="admin-grid">
+    <section class="card">
+      <h2>Jenis antrian</h2>
+      <form id="queue-form" class="inline-form" novalidate>
+        <div class="field small">
+          <label for="q-code">Kode</label>
+          <input id="q-code" maxlength="1" placeholder="C" autocomplete="off">
+        </div>
+        <div class="field grow">
+          <label for="q-name">Nama</label>
+          <input id="q-name" placeholder="Contoh: Farmasi" autocomplete="off">
+        </div>
+        <button class="btn btn-dark" type="submit">Tambah</button>
+      </form>
+      <p id="queue-error" class="form-error" role="alert" hidden></p>
+      <ul id="queue-list" class="list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Terbitkan tiket</h2>
+      <form id="ticket-form" class="inline-form" novalidate>
+        <div class="field grow">
+          <label for="t-queue">Jenis antrian</label>
+          <select id="t-queue"><option value="">Pilih jenis antrian</option></select>
+        </div>
+        <div class="field">
+          <label for="t-priority">Prioritas</label>
+          <select id="t-priority">
+            <option value="Normal">Normal</option>
+            <option value="Lansia">Lansia</option>
+            <option value="Disabilitas">Disabilitas</option>
+            <option value="VIP">VIP</option>
+          </select>
+        </div>
+        <button class="btn btn-dark" type="submit">Terbitkan</button>
+      </form>
+      <p id="ticket-msg" hidden></p>
+      <div id="ticket-list"></div>
+    </section>
+  </main>
+
+  <script src="dist/shared.js" defer></script>
+  <script src="dist/admin.js" defer></script>
+</body>
+</html>

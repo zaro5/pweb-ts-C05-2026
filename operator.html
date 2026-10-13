@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel Operator - Sistem Antrian</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="guarding">
+  <header class="topbar">
+    <h1>Panel Operator</h1>
+    <nav class="topbar-actions">
+      <span id="user-info" class="user-chip"></span>
+      <a id="link-admin" class="btn btn-outline btn-sm" href="index.html" hidden>Dashboard Admin</a>
+      <button id="btn-logout" class="btn btn-outline btn-sm" type="button">Keluar</button>
+    </nav>
+  </header>
+
+  <main id="operator-grid" class="operator-grid"></main>
+
+  <script src="dist/shared.js" defer></script>
+  <script src="dist/operator.js" defer></script>
+</body>
+</html>
