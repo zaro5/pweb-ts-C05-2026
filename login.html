@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk - Antrian Rumah Sakit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-page">
+  <main class="card login-card">
+    <h1>Masuk</h1>
+    <p class="muted">
+      Halaman ini untuk mengakses Dashboard Admin dan Panel Operator. Layar Kiosk tidak memerlukan login.
+    </p>
+
+    <div id="login-error" class="adm-msg error" role="alert" hidden></div>
+
+    <form id="login-form" class="adm-field-group" novalidate>
+      <div class="adm-field">
+        <label for="username">Username</label>
+        <input id="username" type="text" autocomplete="username" placeholder="contoh: emilys" required />
+      </div>
+      <div class="adm-field">
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required />
+      </div>
+      <button id="login-btn" type="submit" class="btn btn-primary login-submit">Masuk</button>
+    </form>
+
+    <p class="muted small">
+      Gunakan akun uji dari
+      <a href="https://dummyjson.com/users" target="_blank" rel="noopener">dummyjson.com/users</a>
+      (contoh username/password tercantum di sana).
+    </p>
+    <p class="muted small">
+      Akses publik: <a href="layar.html">Layar Antrian</a> · <a href="ambil-antrian.html">Ambil Antrian</a>
+    </p>
+  </main>
+
+  <script src="dist/shared.js" defer></script>
+  <script src="dist/login.js" defer></script>
+</body>
+</html>

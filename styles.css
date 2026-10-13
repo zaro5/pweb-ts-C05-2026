@@ -211,3 +211,51 @@ a.btn { text-decoration: none; display: inline-block; }
 @media (max-width: 800px) {
   .admin-grid, .operator-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== Tambahan: login & dashboard admin ===== */
+[hidden] { display: none !important; }
+
+.login-page { min-height: 100vh; display: grid; place-items: center; padding: 16px; }
+.login-card { width: 100%; max-width: 420px; padding: 28px; }
+.login-submit { width: 100%; margin: 18px 0 14px; padding: 11px; }
+.adm-field-group .adm-field { margin-top: 14px; }
+
+.adm-body { padding: 20px; }
+.adm-topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.adm-topbar-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.adm-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 18px; align-items: start; }
+@media (max-width: 800px) { .adm-grid { grid-template-columns: 1fr; } }
+
+.adm-field label { display: block; margin-bottom: 4px; font-size: 0.78rem; color: #64748b; }
+.adm-field input, .adm-field select {
+  width: 100%; padding: 9px 10px; font: inherit; font-size: 0.9rem;
+  border: 1px solid #dbe3ea; border-radius: 8px; background: #fff;
+}
+.adm-field input:focus, .adm-field select:focus { outline: 2px solid #fb9a00; outline-offset: 1px; }
+.adm-inline-form { display: flex; gap: 10px; align-items: flex-end; margin-top: 12px; }
+.adm-code { width: 70px; }
+.adm-grow { flex: 1; }
+
+.adm-msg { margin: 10px 0; padding: 9px 12px; border-radius: 8px; font-size: 0.85rem; }
+.adm-msg.error { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+.adm-msg.success { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+
+.adm-type-list { list-style: none; margin: 14px 0 0; padding: 0; }
+.adm-type-item { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #eef2f6; }
+.adm-row-actions { display: flex; gap: 6px; }
+.adm-sm { padding: 5px 10px; font-size: 0.75rem; }
+.adm-danger { color: #dc2626; border-color: #fca5a5; }
+
+.adm-badge { display: inline-block; margin-left: 6px; padding: 2px 8px; font-size: 0.72rem; border: 1px solid #dbe3ea; border-radius: 6px; background: #f8fafc; color: #64748b; }
+.adm-badge.off { background: #fef3c7; border-color: #fde68a; color: #92400e; }
+.adm-badge.prio-vip { background: #fef3c7; color: #92400e; }
+.adm-badge.prio-lansia { background: #e0f2fe; color: #075985; }
+.adm-badge.prio-disabilitas { background: #ede9fe; color: #5b21b6; }
+.adm-badge.st-dipanggil { background: #ffedd5; color: #c2410c; }
+.adm-badge.st-selesai { background: #dcfce7; color: #166534; }
+.adm-badge.st-dilewati { background: #fee2e2; color: #991b1b; }
+
+.adm-group-title { margin: 18px 0 6px; font-size: 0.78rem; letter-spacing: 0.04em; color: #0f766e; text-transform: uppercase; }
+.adm-ticket-row { display: flex; align-items: center; gap: 4px; padding: 7px 10px; margin-bottom: 4px; background: #f1f9f9; border-radius: 6px; }
+.adm-ticket-label { min-width: 62px; font-size: 0.9rem; }
+.adm-empty { padding: 4px 2px; }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Admin - Antrian Rumah Sakit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="guarding adm-body">
+  <header class="adm-topbar">
+    <div>
+      <h1>Dashboard Admin</h1>
+      <p class="muted small">Reset setiap hari agar penomoran antrian mulai dari awal.</p>
+    </div>
+    <div class="adm-topbar-actions">
+      <span id="user-info" class="muted small"></span>
+      <a href="operator.html" class="btn btn-outline">Panel Operator</a>
+      <button id="btn-reset" type="button" class="btn btn-outline adm-danger">Reset Antrian</button>
+      <button id="btn-logout" type="button" class="btn btn-outline">Keluar</button>
+    </div>
+  </header>
+
+  <main class="adm-grid">
+    <section class="card">
+      <h2>Jenis antrian</h2>
+      <form id="type-form" class="adm-inline-form" novalidate>
+        <div class="adm-field adm-code">
+          <label for="type-code">Kode</label>
+          <input id="type-code" type="text" maxlength="1" placeholder="C" autocomplete="off" required />
+        </div>
+        <div class="adm-field adm-grow">
+          <label for="type-name">Nama</label>
+          <input id="type-name" type="text" maxlength="30" placeholder="Contoh: Farmasi" autocomplete="off" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Tambah</button>
+      </form>
+      <div id="type-msg" class="adm-msg" hidden></div>
+      <ul id="type-list" class="adm-type-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Terbitkan tiket</h2>
+      <form id="ticket-form" class="adm-inline-form" novalidate>
+        <div class="adm-field adm-grow">
+          <label for="ticket-type">Jenis antrian</label>
+          <select id="ticket-type" required></select>
+        </div>
+        <div class="adm-field">
+          <label for="ticket-priority">Prioritas</label>
+          <select id="ticket-priority"></select>
+        </div>
+        <button type="submit" class="btn btn-primary">Terbitkan</button>
+      </form>
+      <div id="ticket-msg" class="adm-msg" hidden></div>
+      <div id="ticket-list"></div>
+    </section>
+  </main>
+
+  <script src="dist/shared.js" defer></script>
+  <script src="dist/admin.js" defer></script>
+</body>
+</html>
