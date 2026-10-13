@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf0f5">
+  <title>Ambil Nomor Antrian | Rumah Sakit</title>
+  <link rel="stylesheet" href="css/ambil-antrian.css">
+  <script src="dist/shared.js" defer></script>
+  <script src="dist/ambil-antrian.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">RUMAH SAKIT · LAYANAN PASIEN</p>
+        <h1>Ambil nomor antrian</h1>
+        <p class="page-subtitle">Pilih jenis layanan untuk mengambil nomor antrian.</p>
+        <p id="updated-at" class="updated-at" aria-live="polite">Data diperbarui --:--:--</p>
+      </div>
+      <nav class="page-nav" aria-label="Navigasi halaman">
+        <a class="page-nav__link" href="layar.html">Layar Antrian</a>
+        <a class="page-nav__link is-active" href="ambil-antrian.html" aria-current="page">Ambil Nomor</a>
+      </nav>
+    </header>
+    <p id="error-message" class="error-message" role="alert" hidden></p>
+    <section id="queue-grid" class="service-grid" aria-label="Jenis layanan untuk mengambil nomor"></section>
+    <footer class="page-footer">Pilih layanan sesuai tujuan kunjungan Anda.</footer>
+  </main>
+
+  <dialog id="ticket-dialog" class="ticket-dialog" aria-labelledby="result-number">
+    <div class="ticket-dialog__content">
+      <p class="dialog-eyebrow">NOMOR ANTRIAN ANDA</p>
+      <p id="result-number" class="result-number">A-001</p>
+      <dl class="ticket-details">
+        <div><dt>Layanan</dt><dd id="result-service"></dd></div>
+        <div><dt>Prioritas</dt><dd id="result-priority"></dd></div>
+        <div><dt>Waktu diambil</dt><dd id="result-time"></dd></div>
+      </dl>
+      <p id="result-ahead" class="result-ahead" aria-live="polite"></p>
+      <button id="close-dialog" class="take-button dialog-close" type="button">Tutup</button>
+    </div>
+  </dialog>
+
+</body>
+</html>

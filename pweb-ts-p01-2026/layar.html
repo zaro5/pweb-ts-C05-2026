@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf0f5">
+  <title>Layar Antrian | Rumah Sakit</title>
+  <link rel="stylesheet" href="css/layar.css">
+  <script src="dist/shared.js" defer></script>
+  <script src="dist/layar.js" defer></script>
+</head>
+<body>
+  <main class="screen-shell">
+    <header class="screen-header">
+      <div class="screen-heading">
+        <p class="eyebrow">RUMAH SAKIT · LAYANAN PASIEN</p>
+        <h1>Nomor sedang dipanggil</h1>
+        <p id="updated-at" class="updated-at" aria-live="polite">Diperbarui --.--.--</p>
+      </div>
+      <div class="screen-controls">
+        <nav class="page-nav" aria-label="Navigasi halaman">
+          <a class="page-nav__link is-active" href="layar.html" aria-current="page">Layar Antrian</a>
+          <a class="page-nav__link" href="ambil-antrian.html">Ambil Nomor</a>
+        </nav>
+        <button id="sound-toggle" class="control-button" type="button" aria-pressed="false">Suara: Nonaktif</button>
+        <button id="fullscreen-toggle" class="control-button control-button--dark" type="button" aria-pressed="false">Layar Penuh</button>
+      </div>
+    </header>
+    <section id="queue-grid" class="queue-grid" aria-label="Nomor antrian yang dipanggil" aria-live="polite"></section>
+    <footer class="screen-footer"><span>Informasi antrian pasien</span><span>Harap menunggu hingga nomor Anda dipanggil</span></footer>
+  </main>
+</body>
+</html>
